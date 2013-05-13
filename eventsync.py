@@ -33,7 +33,7 @@ def fixNotWatchingList(manageFile):
 def fixExclude(manageFile):
     exclude_str = ''
     for n_s in manageFile['not_sync']:
-        exclude_str += '--exclude="' + n_s + '" '
+        exclude_str += '--exclude="' + n_s.encode('utf-8') + '" '
     return exclude_str
 
 
