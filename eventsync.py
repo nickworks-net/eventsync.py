@@ -26,7 +26,7 @@ def getEventsyncFileJson():
 
 #EventsyncFileから監視対象外リストを作成する。
 def fixNotWatchingList(manageFile):
-    return [os.getcwd() + '/' + n_w for n_w in manageFile['not_watching']]
+    return [os.getcwd() + '/' + n_w.encode('utf-8') for n_w in manageFile['not_watching']]
 
 
 #EventsyncFileから監視対象外リストを作成する。
